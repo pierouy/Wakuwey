@@ -1,15 +1,7 @@
 import React from 'react';
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Flex,
-  Box,
-  Spacer,
-} from '@chakra-ui/react';
+import {Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer} from '@chakra-ui/react';
 import CartWidget from './CartWidget';
-import '../main.css'; // Importa el archivo de estilos
+import '../main.css';
 
 const NavBar = () => {
   return (
