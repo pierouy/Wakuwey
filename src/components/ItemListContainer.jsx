@@ -1,29 +1,25 @@
-import {useEffect, useState} from 'react'
-import ItemList from './ItemList';
+import { useEffect, useState } from "react";
+import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
-
   const getProducts = async () => {
-    const response = await fetch("https://fakestoreapi.com/products/")
-    const data = await response.json()
-    console.log(data)
+    const response = await fetch("https://fakestoreapi.com/products/");
+    const data = await response.json();
 
-    return data
-  }
+    return data;
+  };
 
-  const[product, setProduct] = useState([])
-  console.log(product)
+  const [product, setProduct] = useState([]);
 
-  useEffect(()=>{
-      getProducts().then((product)=> setProduct(product))
-  }, [])
+  useEffect(() => {
+    getProducts().then((product) => setProduct(product));
+  }, []);
 
   return (
-      <>
+    <>
+      <ItemList product={product} />
+    </>
+  );
+};
 
-        <ItemList product={product} />
-      </>
-  )
-}
-
-export default ItemListContainer
+export default ItemListContainer;

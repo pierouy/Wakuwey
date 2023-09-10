@@ -20,10 +20,6 @@ const Item = ({ product }) => {
           <Image src={product.image} borderRadius="lg" />
           <Stack mt="6" spacing="3">
             <Heading size="md">{product.title}</Heading>
-            <Text>{product.description}</Text>
-            <Text color="blue.600" fontSize="2xl">
-              ${product.price}
-            </Text>
           </Stack>
         </CardBody>
         <Divider />

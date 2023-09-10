@@ -1,16 +1,20 @@
-import ItemListContainer from "./components/ItemListContainer"
-import NavBar from "./components/NavBar"
+  import CounterComponent from "./CounterComponent"
+  import ItemDetailContainer from "./components/ItemDetailContainer"
+  import ItemListContainer from "./components/ItemListContainer"
+  import NavBar from "./components/NavBar"
 
 
-const App = () => {
+  const App = () => {
 
 
-  return (
-    <>
-    <NavBar />
-    <ItemListContainer greeting={'Bienvenidos a la mejor tienda de comida venezolana por encargo'}/>
-    </>
-  )
-}
+    return (
+      <>
+        <NavBar />
+        {/* <ItemListContainer/> */}
+        {/* <CounterComponent /> */}
+        <ItemDetailContainer />
+      </>
+    )
+  }
 
-export default App
+  export default App

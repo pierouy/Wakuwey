@@ -1,8 +1,14 @@
-import React from 'react'
+import useCounter from '../hooks/useCounter.js'
 
-const ItemCount = () => {
+const ItemCount = ({ contador }) => {
+  const {count, increment, decrement} = useCounter(contador, 1)
+
   return (
-    <div>ItemCount</div>
+    <>
+      <p>{count}</p>
+      <button onClick={increment}>+</button>
+        <button onClick={decrement}>-</button>
+    </>
   )
 }
 
