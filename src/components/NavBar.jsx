@@ -2,12 +2,13 @@ import React from 'react';
 import {Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer} from '@chakra-ui/react';
 import CartWidget from './CartWidget';
 import '../main.css';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <Flex className="navbar" align="center">
       <Box p="4">
-        <h3>Wakuwey</h3>
+          <h3>Wakuwey</h3>
       </Box>
       <Spacer />
       <Box p="4">
@@ -22,7 +23,9 @@ const NavBar = () => {
       </Box>
       <Spacer />
       <Box p="4">
-        <CartWidget className="carrito" />
+        <Link to={"/cart"}>
+          <CartWidget className="carrito" />
+        </Link>
       </Box>
     </Flex>
   );
